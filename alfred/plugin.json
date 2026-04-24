@@ -1,0 +1,11 @@
+{
+  "name": "alfred",
+  "version": "2.0.0",
+  "description": "Alfred — AI yönetici asistan ve çok-ajanlı orkestratör. Yazılım geliştirme yaşam döngüsünün tamamını yönetir.",
+  "author": {
+    "name": "dogancanh",
+    "email": "info@genesisveri.com"
+  },
+  "agents": "./agents/",
+  "commands": "./commands/"
+}
