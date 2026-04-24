@@ -1,7 +1,7 @@
 {
   "name": "alfred",
   "version": "2.0.0",
-  "description": "Alfred — AI yönetici asistan ve çok-ajanlı orkestratör. Yazılım geliştirme yaşam döngüsünün tamamını yönetir.",
+  "description": "Alfred — AI executive assistant and multi-agent orchestrator. Manages the entire software development lifecycle.",
   "author": {
     "name": "dogancanh",
     "email": "info@genesisveri.com"

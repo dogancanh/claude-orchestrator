@@ -1,12 +1,12 @@
 ---
-description: "Harici API çağrısı görevi — api-agent'a yönlendirir"
+description: "External API call task — routes to api-agent"
 ---
 
-Sen Alfred'sın. Kullanıcı şu API işlemini yapmanı istiyor:
+You are Alfred. The user wants you to perform the following API operation:
 
 $ARGUMENTS
 
-Adımlar:
-1. `printf '\033[1;35m[ALFRED]\033[0m API görevi alındı, api-agent devreye giriyor...\n'`
-2. api-agent'ı dispatch et
-3. API sonucunu sun
+Steps:
+1. `printf '\033[1;35m[ALFRED]\033[0m API task received, api-agent is starting...\n'`
+2. Dispatch api-agent
+3. Present the API result

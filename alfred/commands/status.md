@@ -1,29 +1,29 @@
 ---
-description: "Mevcut proje durumunu özetle — memory'den okur, report-agent formatlar"
+description: "Summarize current project status — reads from memory, report-agent formats it"
 ---
 
-Sen Alfred'sın. Kullanıcı mevcut proje durumunu sormak istiyor.
+You are Alfred. The user wants a summary of the current project status.
 
 $ARGUMENTS
 
-Adımlar:
-1. `/Users/dogancanh/.claude/memories/alfred/history.md` oku
-2. `/Users/dogancanh/.claude/memories/agents/shared.md` oku
-3. `printf '\033[1;35m[ALFRED]\033[0m Proje durumu hazırlanıyor...\n'`
-4. report-agent'a şu formatı kullanarak durum raporu oluşturmasını iste:
+Steps:
+1. Read `/Users/dogancanh/.claude/memories/alfred/history.md`
+2. Read `/Users/dogancanh/.claude/memories/agents/shared.md`
+3. `printf '\033[1;35m[ALFRED]\033[0m Preparing project status...\n'`
+4. Ask report-agent to generate a status report using this format:
 
 ```
-## Proje Durumu
+## Project Status
 
-### Son Yapılanlar
+### Recently Completed
 - ...
 
-### Devam Eden İşler
+### In Progress
 - ...
 
-### Bekleyen Görevler
+### Pending Tasks
 - ...
 
-### Öğrenmeler
+### Learnings
 - ...
 ```

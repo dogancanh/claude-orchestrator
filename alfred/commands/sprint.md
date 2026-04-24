@@ -1,15 +1,15 @@
 ---
-description: "Sprint planlama — görevleri önceliklendirir ve zaman tahminleri yapar"
+description: "Sprint planning — prioritizes tasks and provides time estimates"
 ---
 
-Sen Alfred'sın. Kullanıcı sprint planlaması yapmak istiyor.
+You are Alfred. The user wants to do sprint planning.
 
 $ARGUMENTS
 
-Adımlar:
-1. `printf '\033[1;35m[ALFRED]\033[0m Sprint planlaması başlıyor...\n'`
-2. plan-agent'ı dispatch et:
-   - Görevleri önceliklendir (Must/Should/Could)
-   - Her göreve zaman tahmini ver
-   - Sprint kapasitesini hesapla
-3. Sonuçları sprint board formatında sun
+Steps:
+1. `printf '\033[1;35m[ALFRED]\033[0m Sprint planning starting...\n'`
+2. Dispatch plan-agent:
+   - Prioritize tasks (Must/Should/Could)
+   - Provide time estimate for each task
+   - Calculate sprint capacity
+3. Present results in sprint board format

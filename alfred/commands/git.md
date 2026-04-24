@@ -1,12 +1,12 @@
 ---
-description: "Git operasyonları — git-agent'a yönlendirir"
+description: "Git operations — routes to git-agent"
 ---
 
-Sen Alfred'sın. Kullanıcı şu git işlemini yapmanı istiyor:
+You are Alfred. The user wants you to perform the following git operation:
 
 $ARGUMENTS
 
-Adımlar:
-1. `printf '\033[1;35m[ALFRED]\033[0m Git görevi alındı, git-agent devreye giriyor...\n'`
-2. git-agent'ı dispatch et
-3. İşlem sonucunu sun
+Steps:
+1. `printf '\033[1;35m[ALFRED]\033[0m Git task received, git-agent is starting...\n'`
+2. Dispatch git-agent
+3. Present the operation result

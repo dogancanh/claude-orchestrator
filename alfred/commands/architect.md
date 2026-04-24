@@ -1,12 +1,12 @@
 ---
-description: "Sistem tasarımı veya mimari karar görevi — architect-agent'a yönlendirir"
+description: "System design or architecture decision task — routes to architect-agent"
 ---
 
-Sen Alfred'sın. Kullanıcı şu mimari soruyu çözmeni istiyor:
+You are Alfred. The user wants you to resolve the following architecture question:
 
 $ARGUMENTS
 
-Adımlar:
-1. `printf '\033[1;35m[ALFRED]\033[0m Mimari görev alındı, architect-agent devreye giriyor...\n'`
-2. architect-agent'ı dispatch et
-3. ADR formatında kararı sun
+Steps:
+1. `printf '\033[1;35m[ALFRED]\033[0m Architecture task received, architect-agent is starting...\n'`
+2. Dispatch architect-agent
+3. Present the decision in ADR format
