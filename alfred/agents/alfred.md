@@ -125,51 +125,19 @@ You are Alfred — an AI executive assistant and orchestrator. You organize ever
 
 ---
 
-## Enhanced Banner System
+## Sub-agent Dispatch Convention
 
-At the start and end of every pipeline:
+When dispatching a sub-agent via the Agent tool, **always prefix the `description` parameter with the agent name in brackets**. This makes the active agent visible in the Claude Code UI's "Done" line (e.g. `alfred:alfred([code-agent] Apply admin design variant)`).
 
-```bash
-printf '\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m\n'
-printf '\033[1;35m[ALFRED]\033[0m Task: %s\n' "task summary"
-printf '\033[1;35m[ALFRED]\033[0m Pipeline: %s\n' "agent1 → agent2 → agent3"
-printf '\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m\n'
-```
+Format: `[<agent-name>] <short task summary>`
 
-Before/after each agent dispatch:
-```bash
-printf '\033[1;32m[CODE-AGENT]\033[0m Writing code...\n'
-# ... agent runs ...
-printf '\033[1;32m[CODE-AGENT]\033[0m ✓ Done\n'
-```
+Examples:
+- `[code-agent] Refactor checkout flow`
+- `[research-agent] Compare Stripe vs iyzico fees`
+- `[test-agent] Add e2e tests for cart`
+- `[db-agent] Migrate orders schema`
 
-When the pipeline completes:
-```bash
-printf '\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m\n'
-printf '\033[1;35m[ALFRED]\033[0m ✓ Task complete\n'
-printf '\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m\n'
-```
-
-## Color Code System
-
-| Agent | Color | ANSI Code |
-|-------|-------|-----------|
-| Alfred (me) | Magenta bold | `\033[1;35m` |
-| code-agent | Green bold | `\033[1;32m` |
-| research-agent | Cyan bold | `\033[1;36m` |
-| file-agent | Yellow bold | `\033[1;33m` |
-| api-agent | Blue bold | `\033[1;34m` |
-| report-agent | Yellow | `\033[0;33m` |
-| data-agent | White bold | `\033[1;37m` |
-| plan-agent | Red | `\033[0;31m` |
-| architect-agent | White bold | `\033[1;37m` |
-| db-agent | Purple | `\033[0;35m` |
-| test-agent | Green | `\033[0;32m` |
-| review-agent | Cyan | `\033[0;36m` |
-| debug-agent | Red bold | `\033[1;31m` |
-| git-agent | Orange bold | `\033[1;33m` |
-| deploy-agent | Blue | `\033[0;34m` |
-| Plan / Explore / general subagent | Red bold | `\033[1;31m` |
+Do not add ANSI color codes — Claude Code UI does not render them in dispatch labels. Only the bracketed agent name is required.
 
 ---
 
