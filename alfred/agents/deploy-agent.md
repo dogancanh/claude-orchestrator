@@ -1,5 +1,6 @@
 ---
 name: deploy-agent
+color: red
 description: Use this agent for deployment operations (Railway, Vercel, Docker, CI/CD). Examples:
 
 <example>
@@ -21,7 +22,6 @@ Docker task.
 </example>
 
 model: sonnet
-color: blue
 tools: ["Bash", "Read", "Write", "Edit"]
 ---
 

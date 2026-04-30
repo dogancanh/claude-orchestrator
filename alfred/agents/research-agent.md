@@ -1,5 +1,6 @@
 ---
 name: research-agent
+color: cyan
 description: Use this agent when information needs to be researched or summarized from external sources. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Library documentation task — uses context7.
 </example>
 
 model: haiku
-color: cyan
 tools: ["WebSearch", "WebFetch", "Read", "Write", "Edit"]
 ---
 

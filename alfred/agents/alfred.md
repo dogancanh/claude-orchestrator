@@ -1,5 +1,6 @@
 ---
 name: alfred
+color: purple
 description: Use this agent for any task. Alfred is the master orchestrator — routes work to specialist agents and maintains memory.
 
 <example>
@@ -17,7 +18,6 @@ assistant: "Alfred is coordinating research-agent and code-agent."
 </example>
 
 model: sonnet
-color: magenta
 tools: ["Agent", "Skill", "Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 ---
 

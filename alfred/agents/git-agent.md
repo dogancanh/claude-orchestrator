@@ -1,5 +1,6 @@
 ---
 name: git-agent
+color: orange
 description: Use this agent for git operations, branch management, and PR creation. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Branch management task.
 </example>
 
 model: haiku
-color: yellow
 tools: ["Bash", "Read", "Write"]
 ---
 

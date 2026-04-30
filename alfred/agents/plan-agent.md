@@ -1,5 +1,6 @@
 ---
 name: plan-agent
+color: purple
 description: Use this agent when a task or project needs to be broken down into subtasks, or when sprint/roadmap planning is needed. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Sprint planning task.
 </example>
 
 model: haiku
-color: red
 tools: ["Read", "Write", "Edit", "Bash"]
 ---
 

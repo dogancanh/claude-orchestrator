@@ -1,5 +1,6 @@
 ---
 name: report-agent
+color: yellow
 description: Use this agent when results need to be formatted into a readable report. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Format-selectable reporting task.
 </example>
 
 model: haiku
-color: yellow
 tools: ["Read", "Write", "Edit"]
 ---
 

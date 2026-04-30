@@ -1,5 +1,6 @@
 ---
 name: test-agent
+color: yellow
 description: Use this agent for writing and running tests (unit, integration, e2e). Examples:
 
 <example>
@@ -21,7 +22,6 @@ Test running task.
 </example>
 
 model: sonnet
-color: green
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Skill"]
 ---
 

@@ -1,5 +1,6 @@
 ---
 name: db-agent
+color: green
 description: Use this agent for database schema design, migrations, and query optimization. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Migration task.
 </example>
 
 model: sonnet
-color: magenta
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob"]
 ---
 

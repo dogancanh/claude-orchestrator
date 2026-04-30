@@ -1,5 +1,6 @@
 ---
 name: api-agent
+color: cyan
 description: Use this agent when external API calls need to be made. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Authenticated API call.
 </example>
 
 model: haiku
-color: blue
 tools: ["Bash", "Read", "Write", "Edit"]
 ---
 

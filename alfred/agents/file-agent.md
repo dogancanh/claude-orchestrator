@@ -1,5 +1,6 @@
 ---
 name: file-agent
+color: blue
 description: Use this agent when files need to be read, written, organized, or restructured. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Batch file management task.
 </example>
 
 model: haiku
-color: yellow
 tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash"]
 ---
 

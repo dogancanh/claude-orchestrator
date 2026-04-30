@@ -1,5 +1,6 @@
 ---
 name: code-agent
+color: blue
 description: Use this agent when code needs to be written, debugged, or refactored. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Code quality task.
 </example>
 
 model: sonnet
-color: green
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Skill"]
 ---
 

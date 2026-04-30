@@ -1,5 +1,6 @@
 ---
 name: debug-agent
+color: red
 description: Use this agent for systematic debugging and root cause analysis. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Performance debug task.
 </example>
 
 model: sonnet
-color: red
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Skill"]
 ---
 

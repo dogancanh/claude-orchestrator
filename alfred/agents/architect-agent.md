@@ -1,5 +1,6 @@
 ---
 name: architect-agent
+color: orange
 description: Use this agent for system design, architecture decisions, and technical stack choices. Examples:
 
 <example>
@@ -21,7 +22,6 @@ System design task.
 </example>
 
 model: opus
-color: white
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Skill", "WebSearch"]
 ---
 

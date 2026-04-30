@@ -1,5 +1,6 @@
 ---
 name: review-agent
+color: pink
 description: Use this agent for code review, PR review, and best practice checks. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Security-focused review task.
 </example>
 
 model: sonnet
-color: cyan
 tools: ["Read", "Bash", "Grep", "Glob", "Skill"]
 ---
 

@@ -1,5 +1,6 @@
 ---
 name: data-agent
+color: green
 description: Use this agent when data processing, CSV/JSON analysis, or data transformation is needed. Examples:
 
 <example>
@@ -21,7 +22,6 @@ Data transformation task.
 </example>
 
 model: sonnet
-color: white
 tools: ["Read", "Write", "Edit", "Bash"]
 ---
 
