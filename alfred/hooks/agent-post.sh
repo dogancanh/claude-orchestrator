@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# alfred PostToolUse(Agent) — bitiş süresi ve token tahmini
+# alfred PostToolUse(Agent) — bitiş kutusu + token tahmini
 set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+. "$SCRIPT_DIR/lib-color.sh"
 
 MEM="${HOME}/.claude/memories/alfred"
 mkdir -p "$MEM"
@@ -25,7 +29,13 @@ DUR=$(( EPOCH - START ))
 OUT_LEN=$(echo -n "$INPUT" | /usr/bin/wc -c | /usr/bin/tr -d ' ')
 APPROX_TOK=$(( OUT_LEN / 4 ))
 
-printf '\033[36m[alfred]\033[0m ← \033[32m%s done\033[0m │ %ss │ ~%s tok │ %s\n' "$AGENT" "$DUR" "$APPROX_TOK" "$TS" >&2
+{
+  alfred_header_box
+  status_box "DONE    " 28
+  agent_box "$AGENT"
+  printf '  \033[2m%ss · ~%s tok\033[0m  \033[2m%s\033[0m\n' "$DUR" "$APPROX_TOK" "$TS"
+} >&2
+
 printf '%s ◀ DONE     %s │ %ss │ ~%s tok\n' "$TS" "$AGENT" "$DUR" "$APPROX_TOK" >> "$TRACE"
 printf '%s,%s,%s,%s,%s\n' "$TS" "$AGENT" "$DUR" "$OUT_LEN" "$APPROX_TOK" >> "$TOKENS"
 
