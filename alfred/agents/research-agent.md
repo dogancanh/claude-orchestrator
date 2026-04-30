@@ -20,7 +20,7 @@ Library documentation task — uses context7.
 </commentary>
 </example>
 
-model: sonnet
+model: haiku
 color: cyan
 tools: ["WebSearch", "WebFetch", "Read", "Write", "Edit"]
 ---

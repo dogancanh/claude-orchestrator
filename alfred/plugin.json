@@ -1,11 +1,12 @@
 {
   "name": "alfred",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Alfred — AI executive assistant and multi-agent orchestrator. Manages the entire software development lifecycle.",
   "author": {
     "name": "dogancanh",
     "email": "info@genesisveri.com"
   },
   "agents": "./agents/",
-  "commands": "./commands/"
+  "commands": "./commands/",
+  "hooks": "./hooks/hooks.json"
 }

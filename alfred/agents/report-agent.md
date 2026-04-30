@@ -20,7 +20,7 @@ Format-selectable reporting task.
 </commentary>
 </example>
 
-model: sonnet
+model: haiku
 color: yellow
 tools: ["Read", "Write", "Edit"]
 ---

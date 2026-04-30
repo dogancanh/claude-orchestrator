@@ -20,7 +20,7 @@ Security-focused review task.
 </commentary>
 </example>
 
-model: opus
+model: sonnet
 color: cyan
 tools: ["Read", "Bash", "Grep", "Glob", "Skill"]
 ---

@@ -20,7 +20,7 @@ Code quality task.
 </commentary>
 </example>
 
-model: opus
+model: sonnet
 color: green
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Skill"]
 ---

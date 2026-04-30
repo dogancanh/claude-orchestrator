@@ -31,21 +31,23 @@ Just talk to Alfred naturally, or use slash commands for direct dispatch:
 
 | Agent | Model | Responsibility |
 |-------|-------|----------------|
-| **alfred** | opus | Central orchestrator — routes all tasks |
-| **code-agent** | opus | Writing, refactoring, implementing features |
-| **research-agent** | sonnet | Web research + library documentation (context7) |
+| **alfred** | sonnet | Central orchestrator, routes all tasks |
+| **code-agent** | sonnet | Writing, refactoring, implementing features |
+| **research-agent** | haiku | Web research + library documentation (context7) |
 | **api-agent** | haiku | External API calls with retry & auth support |
 | **file-agent** | haiku | File read/write/organize with project awareness |
-| **report-agent** | sonnet | Format output as markdown, JSON, or tables |
+| **report-agent** | haiku | Format output as markdown, JSON, or tables |
 | **plan-agent** | haiku | Task breakdown, sprint planning, roadmaps |
 | **architect-agent** | opus | System design, tech stack decisions, ADRs |
 | **data-agent** | sonnet | Data processing, CSV/JSON analysis, transforms |
 | **db-agent** | sonnet | DB schema, migrations, query optimization |
 | **test-agent** | sonnet | Unit/integration/e2e test writing and running |
-| **review-agent** | opus | Code review, PR review, best practice checks |
-| **debug-agent** | opus | Systematic debugging and root cause analysis |
+| **review-agent** | sonnet | Code review, PR review, best practice checks |
+| **debug-agent** | sonnet | Systematic debugging and root cause analysis |
 | **git-agent** | haiku | Git operations, branch management, PRs |
 | **deploy-agent** | sonnet | Railway, Vercel, Docker, Fly.io deployments |
+
+Sadece architect-agent opus. Default sonnet, basit ajanlar haiku — token maliyeti %60-70 düşük.
 
 ## Slash Commands (15)
 
@@ -70,7 +72,16 @@ Just talk to Alfred naturally, or use slash commands for direct dispatch:
 | `/alfred:status` | Current project status from memory |
 | `/alfred:standup` | Yesterday / today / blockers report |
 | `/alfred:sprint` | Sprint planning with estimates |
-| `/alfred:pipeline` | Run a custom agent chain: `research → code → test → deploy` |
+| `/alfred:pipeline` | Run a custom agent chain (parallel-aware): `[research, file] → code → test` |
+
+### Observability
+| Command | Description |
+|---------|-------------|
+| `/alfred:watch` | Live tail of agent dispatches (`trace.log`) |
+| `/alfred:trace` | ASCII tree of last session's agent calls |
+| `/alfred:tokens` | 7-day token usage report per agent |
+
+Hooks otomatik çalışır: her Agent dispatch terminale renkli yazar, `trace.log` ve `tokens.csv`'ye kaydeder.
 
 ## Stack-Agnostic
 
@@ -82,14 +93,22 @@ Alfred maintains persistent memory across sessions:
 
 ```
 ~/.claude/memories/alfred/
-├── history.md      # Past tasks
-└── learnings.md    # Accumulated learnings
+├── history.md          # Past tasks (auto-rotates >200 lines)
+├── history-archive.md  # Older entries
+├── learnings.md        # Accumulated learnings
+├── errors.md           # Error log
+├── trace.log           # Live agent dispatch trace
+└── tokens.csv          # Per-call token metrics
 
 ~/.claude/memories/agents/
 ├── shared.md       # Shared project context
 ├── code-agent.md   # Per-agent memory
 └── ...             # One file per agent
 ```
+
+## Persona
+
+Alfred persona'sı `alfred/references/persona.md` dosyasında — sahip bilgisi, stack, ses tonu ve anti-AI style kuralları (yasak kelimeler, em-dash yasağı, Türkçe konuş kod İngilizce). Kişiselleştirmek için bu dosyayı düzenle.
 
 ## Contributing
 

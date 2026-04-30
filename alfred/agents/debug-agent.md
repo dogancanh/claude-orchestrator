@@ -20,7 +20,7 @@ Performance debug task.
 </commentary>
 </example>
 
-model: opus
+model: sonnet
 color: red
 tools: ["Read", "Write", "Edit", "Bash", "Grep", "Glob", "Skill"]
 ---
